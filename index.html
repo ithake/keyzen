@@ -1,9 +1,11 @@
 <!doctype html5>
 
 <!--<html manifest="keyzen.manifest">-->
+
 <html>
 
     <head>
+    <meta charset="UTF-8">
         <title>keyzen</title>
         <script src="jquery.js"></script>
         <script src="keyzen.js"></script>
@@ -20,14 +22,14 @@
             body {
                 background-image: url('brushed_alu.png');
                 font-family: 'Ubuntu Monokz', sans-serif;
-                padding: 0; 
+                padding: 0;
                 margin: 0;
                 -webkit-touch-callout: none;
                 -webkit-user-select: none;
                 -khtml-user-select: none;
                 -moz-user-select: none;
                 -ms-user-select: none;
-                user-select: none;            
+                user-select: none;
             }
 
             #container {
@@ -51,13 +53,13 @@
                 word-wrap: break-word;
             	text-shadow: 0px 2px 3px #000;
             }
-            
+
             .keys-hit {
                 color: #CCC;
                 font-size: 128px;
             	text-shadow: none;
             }
-            
+
             #next-level {
                 height: 2px;
                 background-color: #f78d1d;
@@ -77,7 +79,7 @@
                 cursor: hand;
                 color: #AAAAAA;
             }
-            
+
             #rigor {
                 font-size: 16px;
                 position: absolute;
@@ -97,31 +99,30 @@
                 font-weight: bold;
                 text-align: right;
             }
-            
+
             #rigor-number {
                 color: #000;
                 cursor: hand;
-            }   
+            }
 
             .currentChar {
                 border-bottom: 4px solid #f78d1d;
             }
-            
+
             .errorChar {
                 color: #FF0000;
             }
-            
+
             .goodChar {
                 color: #AAAAAA;
             	text-shadow: 0px 1px 1px #FFF, 0px 2px 2px #FFF;
             }
-            
+
         </style>
 
     </head>
 
     <body>
-
         <div id='container'>
 
             <div id='layout'>
@@ -135,15 +136,15 @@
 
             <div id='word'>
             </div>
-            
+
             <div id='rigor'>
             </div>
 
             <div id="stats">
             </div>
 
-        </div>        
+        </div>
 
     </body>
-    
+
 </html>
