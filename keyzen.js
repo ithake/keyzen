@@ -10,9 +10,13 @@ data.consecutive = 5;
 data.word_length = 7;
 data.current_layout = "qwerty";
 layouts={};
-layouts["qwerty"] = " jfkdlsahgyturieowpqbnvmcxz6758493021`-=[]\\;',./ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()_+{}|:\"<>?";
-layouts["azerty"] = " jfkdlsmqhgyturieozpabnvcxw6758493021`-=[]\\;',./ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()_+{}|:\"<>?";
-layouts["colemak"] = " ntesiroahdjglpufywqbkvmcxz1234567890'\",.!?:;/@$%&#*()_ABCDEFGHIJKLMNOPQRSTUVWXYZ~+-={}|^<>`[]\\";
+layouts["qwerty"] = 	" jfkdlsahgyturieowpqbnvmcxz6758493021`-=[]\\;',./ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()_+{}|:\"<>?";
+layouts["azerty"] = 	" jfkdlsmqhgyturieozpabnvcxw6758493021`-=[]\\;',./ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()_+{}|:\"<>?";
+//                        letters                       main chars  numbers     symbols    shift+chars                 shift+numbers     shift+chars
+layouts["colemak-uk"] =	" ntesiroahdjglpufywqbkvmcxz" + "';,.\\/"+"6758493021"+"`-=[]#" + "NTESIROAHDJGLPUFYWQBNVMCXZ"+"¬!\"£$%^&*()_+"+":{}@~<>?";
+layouts["colemak"] =	" ntesiroahdjglpufywqbkvmcxz1234567890'\",.!?:;/@$%&#*()_ABCDEFGHIJKLMNOPQRSTUVWXYZ~+-={}|^<>`[]\\";
+
++"~+-={}|^<>`[]\\";
 layouts["bépo"] = " tesirunamc,èvodpléjbk'.qxghyfàzw6758493021`-=[]\\;/ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()_+{}|:\"<>?";
 
 $(document).ready(function() {
@@ -229,8 +233,8 @@ function render_level_bar() {
     }
     m = Math.floor($('#level-chars-wrap').innerWidth() * Math.min(1.0, m / data.consecutive));
     $('#next-level').css({'width': '' + m + 'px'});
-    
-}   
+
+}
 
 function render_word() {
     var word = "";
